@@ -1,0 +1,24 @@
+{
+  "name": "blog-platform-final",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blog platform with ExpressJS Auth & Blog servers, MariaDB persistence, and ReactJS frontend",
+  "scripts": {
+    "auth": "node auth-server/server.js",
+    "blog": "node blog-server/server.js",
+    "auth:dev": "node --watch auth-server/server.js",
+    "blog:dev": "node --watch blog-server/server.js",
+    "frontend": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "install:all": "npm install && npm --prefix frontend install"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.0"
+  }
+}
